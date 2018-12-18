@@ -1,6 +1,6 @@
 <?php
 
-namespace firstlaravel\Http\Controllers\Controller ;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator;
@@ -27,7 +27,7 @@ class MainController extends Controller
 
      if(Auth::attempt($user_data))
      {
-      return redirect('public/successlogin');
+      return redirect('main/successlogin');
      }
      else
      {
@@ -44,7 +44,7 @@ class MainController extends Controller
     function logout()
     {
      Auth::logout();
-     return redirect('public');
+     return redirect('main');
     }
 }
 
